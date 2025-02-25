@@ -1,0 +1,32 @@
+ntdsutil
+activate instance ntds
+snapshot
+create
+quit
+quit
+
+ntdsutil
+snapshot
+list all
+quit
+quit
+
+
+ntdsutil
+snapshot
+mount {GUID_of_snapshot}
+quit
+quit
+
+Stop NTDS 
+net stop NTDS
+
+open the NDTS from the directory C:\windows\NTDS\NTDS.DIT- Rename this to old
+
+Go to C drive and locate the mounted drive
+Open and go to windows\ntds
+Copy the NTDS.DIT
+Paste it to C:\windows\NTDS\
+
+Start NTDS
+net start NTDS
